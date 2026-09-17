@@ -1,0 +1,73 @@
+# === OS junk ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Editors / IDEs ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# === C / C++ ===
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.lib
+*.dll
+*.so
+*.exp
+*.pdb
+*.ilk
+
+# === Java ===
+*.class
+*.jar
+*.war
+target/
+out/
+
+# === Python ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+*.egg-info/
+
+# === JavaScript / Node ===
+node_modules/
+npm-debug.log
+package-lock.json
+dist/
+build/
+
+# === Dart / Flutter ===
+.dart_tool/
+.packages
+pubspec.lock
+
+# === PHP ===
+vendor/
+composer.lock
+
+# === Assembly / low-level build artifacts ===
+*.bin
+*.hex
+*.map
+*.lst
+
+# === Logs & temp files ===
+*.log
+*.tmp
+*.bak
+toss_results.txt
+
+# === Archives (unless intentionally committed) ===
+*.zip
+*.rar
+*.7z
