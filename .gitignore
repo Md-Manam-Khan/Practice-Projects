@@ -65,7 +65,6 @@ composer.lock
 *.log
 *.tmp
 *.bak
-toss_results.txt
 
 # === Archives (unless intentionally committed) ===
 *.zip

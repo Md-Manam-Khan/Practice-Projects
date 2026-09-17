@@ -1,0 +1,4 @@
+[2026-09-18 01:11:06] Regular toss | participants: 2 | winner: Manam
+[2026-09-18 01:11:29] Ranked elimination | participants: 2 | standings: 1)Manam 2)Shafil
+[2026-09-18 01:11:46] Best of series | Manam vs Shafil | best of 3 | final score: Manam 1 - 2 Shafil | winner: Shafil
+[2026-09-18 01:12:02] Head-to-head stats | Manam vs Shafil | tosses: 4 | Manam: 2 Shafil: 2
