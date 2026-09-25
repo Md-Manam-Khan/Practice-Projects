@@ -1,0 +1,18 @@
+# === Build artifacts ===
+Smart_Calculator
+Smart_Calculator.exe
+*.o
+*.obj
+*.out
+
+# === OS junk ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Editors / IDEs ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
