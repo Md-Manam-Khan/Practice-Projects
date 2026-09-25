@@ -8,6 +8,7 @@ A C++17 console-based calculator with a menu-driven interface, input validation,
 
 - **Arithmetic operations** — addition, subtraction, multiplication, division.
 - **Integer operations** — modulus, left shift (`<<`), right shift (`>>`), bitwise AND (`&`), bitwise OR (`|`).
+- **Number system conversion** — convert between binary, octal, decimal, and hexadecimal.
 - Guards against division by zero, modulus by zero, and negative shift amounts.
 - Colored terminal output for menus, prompts, results, and errors.
 - Input validation on every prompt — invalid input never crashes or exits the program.
@@ -47,7 +48,23 @@ Smart_Calculator.exe
 | 7 | Left Shift | `<<` |
 | 8 | Bitwise AND | `&` |
 | 9 | Bitwise OR | `\|` |
+| 10 | Number System Conversion | — |
 | 0 | Exit | — |
+
+---
+
+## Number System Conversion
+
+Option `10` opens a base sub-menu:
+
+| # | Base |
+|---|---|
+| 1 | Binary |
+| 2 | Octal |
+| 3 | Decimal |
+| 4 | Hexadecimal |
+
+Pick a source base, a target base, then enter the number in the source base (hex digits `A`-`F` are accepted in either case). The result is printed in the target base and logged the same way as every other calculation.
 
 ---
 
@@ -70,7 +87,6 @@ The file is created automatically on first use and appended to on every subseque
 This project is still growing. Planned additions include:
 
 - Trigonometric functions — `sin`, `cos`, `tan`
-- Number type conversion (e.g. decimal ⇄ binary ⇄ hexadecimal ⇄ octal)
 
 ---
 
