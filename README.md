@@ -30,7 +30,9 @@ Nothing here is copied. If something looks rough around the edges, that's intent
 
 | Project | Language | Description |
 |---|---|---|
-| _(added as projects are pushed)_ | | |
+| [Toss_Simulator](./Toss_Simulator) | C++ | Coin toss simulator with multiple game modes and result logging |
+| [Number_Guessing_Game](./Number_Guessing_Game) | C++ | Classic number guessing game |
+| [Smart_Calculator](./Smart_Calculator) | C++ | Console calculator supporting arithmetic and bitwise operations, with trig and number conversion planned |
 
 Each project folder contains its own `README.md` with specifics.
 
