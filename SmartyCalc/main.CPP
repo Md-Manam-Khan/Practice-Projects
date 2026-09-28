@@ -22,6 +22,7 @@ int main ()
             cout<<"\nInput two numbers: ";
             cin>>x>>y;
             answer = add(x, y);
+            cout<<"\nThe result of addition is: "<<answer;
         }
     }
 }
