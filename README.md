@@ -32,7 +32,7 @@ Nothing here is copied. If something looks rough around the edges, that's intent
 |---|---|---|
 | [Toss_Simulator](./Toss_Simulator) | C++ | Coin toss simulator with multiple game modes and result logging |
 | [Number_Guessing_Game](./Number_Guessing_Game) | C++ | Classic number guessing game |
-| [Smart_Calculator](./Smart_Calculator) | C++ | Console calculator supporting arithmetic and bitwise operations, with trig and number conversion planned |
+| [SmartyCalc](./SmartyCalc) | C++ | Console calculator; my first multi-file C++ project. Trig, geometry, and time conversion planned |
 
 Each project folder contains its own `README.md` with specifics.
 
