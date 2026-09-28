@@ -13,7 +13,6 @@ desktop.ini
 # === C / C++ ===
 *.o
 *.obj
-*.exe
 *.out
 *.a
 *.lib
