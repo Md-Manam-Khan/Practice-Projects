@@ -28,10 +28,8 @@ int main ()
         }
         case 1:
         {
-            cout<<"Input two numbers: ";
-            cin>>x>>y;
-            answer = add(x, y);
-            cout<<"\nThe result of addition is: "<<answer;
+            add();
+            
             break;
         }
         default:
