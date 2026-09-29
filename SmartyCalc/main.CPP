@@ -13,12 +13,18 @@ int main ()
     choosepoint:
     cout<<"\nChoose a function:";
     cout<<"\n1. Addition";
+    cout<<"\n0. Exit";
     cout<<"\n\nI choose: ";
     cin>>choiceString;
     cout<<"\n";
     choice = stoi(choiceString);
     switch(choice)
     {
+        case 0:
+        {
+            cout<<line<<"Okay Bye!"<<line;
+            return 0;
+        }
         case 1:
         {
             cout<<"Input two numbers: ";
