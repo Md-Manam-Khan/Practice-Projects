@@ -4,6 +4,7 @@ using ll = long long;
 using str = string;
 #define line "====="
 #include "add.h"
+#include "choose.h"
 #include "bye.h"
 int main ()
 {
@@ -29,7 +30,21 @@ int main ()
         case 1:
         {
             add();
-            
+            choice = choose();
+            switch (choice)
+            {
+                case 1:
+                {
+                    goto choosepoint;
+                    break;
+                }
+                default:
+                {
+                    cout<<"\n";
+                    bye();
+                    break;
+                }
+            }
             break;
         }
         default:
