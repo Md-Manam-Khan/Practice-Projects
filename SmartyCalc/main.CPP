@@ -4,6 +4,7 @@ using ll = long long;
 using str = string;
 #define line "====="
 #include "add.h"
+#include "bye.h"
 int main ()
 {
     ios::sync_with_stdio(false);
@@ -22,7 +23,7 @@ int main ()
     {
         case 0:
         {
-            cout<<line<<"Okay Bye!"<<line;
+            bye();
             return 0;
         }
         case 1:
