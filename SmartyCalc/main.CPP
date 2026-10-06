@@ -4,6 +4,7 @@ using ll = long long;
 using str = string;
 #define line "====="
 #include "add.h"
+#include "sub.h"
 #include "choose.h"
 #include "bye.h"
 int main ()
@@ -15,6 +16,7 @@ int main ()
     choosepoint:
     cout<<"\nChoose a function:";
     cout<<"\n1. Addition";
+    cout<<"\n2. Subtraction";
     cout<<"\n0. Exit";
     cout<<"\n\nI choose: ";
     cin>>choiceString;
@@ -30,6 +32,26 @@ int main ()
         case 1:
         {
             add();
+            choice = choose();
+            switch (choice)
+            {
+                case 1:
+                {
+                    goto choosepoint;
+                    break;
+                }
+                default:
+                {
+                    cout<<"\n";
+                    bye();
+                    break;
+                }
+            }
+            break;
+        }
+        case 2:
+        {
+            sub();
             choice = choose();
             switch (choice)
             {
