@@ -1,0 +1,52 @@
+name: SmartyCalc CI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "SmartyCalc/**"
+      - ".github/workflows/smartycalc-ci.yml"
+
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "SmartyCalc/**"
+      - ".github/workflows/smartycalc-ci.yml"
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    defaults:
+      run:
+        working-directory: SmartyCalc
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build SmartyCalc
+        shell: bash
+        run: |
+          mkdir -p build
+
+          g++ -std=c++17 -Wall -Wextra -pedantic \
+            main.CPP \
+            add.cpp \
+            sub.cpp \
+            choose.cpp \
+            bye.cpp \
+            -o build/SmartyCalc.exe
+
+      - name: Verify build
+        shell: bash
+        run: |
+          test -f build/SmartyCalc.exe
+
+      - name: Upload compiled program
+        uses: actions/upload-artifact@v4
+        with:
+          name: SmartyCalc-Windows
+          path: SmartyCalc/build/SmartyCalc.exe
