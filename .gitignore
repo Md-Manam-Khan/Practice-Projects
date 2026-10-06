@@ -21,6 +21,7 @@ desktop.ini
 *.exp
 *.pdb
 *.ilk
+*.exe
 
 # === Java ===
 *.class
