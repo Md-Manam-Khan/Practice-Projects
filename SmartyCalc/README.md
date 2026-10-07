@@ -27,18 +27,18 @@ This is a work in progress. Next up:
 Requires a C++ compiler (e.g. g++, MinGW on Windows).
 
 ```bash
-g++ main.CPP add.cpp -o SmartyCalc
+g++ main.CPP add.cpp sub.cpp choose.cpp mult.cpp bye.cpp -o SmartyCalc
 ./SmartyCalc
 ```
 
 On Windows:
 
 ```bash
-g++ main.CPP add.cpp -o SmartyCalc
+g++ main.CPP add.cpp sub.cpp choose.cpp mult.cpp bye.cpp -o SmartyCalc
 .\SmartyCalc
 ```
 
-Both source files must be passed to the compiler together — building `main.CPP` alone will fail to link.
+All source files must be passed to the compiler together — building `main.CPP` alone will fail to link.
 
 ---
 
