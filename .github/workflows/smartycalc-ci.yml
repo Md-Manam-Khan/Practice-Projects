@@ -25,19 +25,28 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Build SmartyCalc
         shell: bash
         run: |
           mkdir -p build
 
+          # Compile every .cpp/.CPP file in SmartyCalc (pure bash glob, no find/sort,
+          # because Windows runners can resolve `find` to the Windows find.exe)
+          shopt -s nocaseglob nullglob
+          SOURCES=(*.cpp)
+
+          if [ ${#SOURCES[@]} -eq 0 ]; then
+            echo "No .cpp files found in $(pwd)"
+            exit 1
+          fi
+
+          echo "Compiling ${#SOURCES[@]} files: ${SOURCES[*]}"
+          g++ --version
+
           g++ -std=c++17 -Wall -Wextra -pedantic \
-            main.CPP \
-            add.cpp \
-            sub.cpp \
-            choose.cpp \
-            bye.cpp \
+            "${SOURCES[@]}" \
             -o build/SmartyCalc.exe
 
       - name: Verify build
