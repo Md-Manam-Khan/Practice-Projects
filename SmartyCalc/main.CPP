@@ -5,6 +5,7 @@ using str = string;
 #define line "====="
 #include "add.h"
 #include "sub.h"
+#include "mult.h"
 #include "choose.h"
 #include "bye.h"
 int main ()
