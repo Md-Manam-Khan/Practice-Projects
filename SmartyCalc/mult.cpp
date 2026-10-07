@@ -2,7 +2,7 @@
 using namespace std;
 using ll = long long;
 #include "mult.h"
-void add ()
+void mult ()
 {
     ll x, y, answer;
     cout<<"Input two numbers: ";
