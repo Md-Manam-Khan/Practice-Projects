@@ -17,6 +17,7 @@ int main ()
     cout<<"\nChoose a function:";
     cout<<"\n1. Addition";
     cout<<"\n2. Subtraction";
+    cout<<"\n3. Multiplication";
     cout<<"\n0. Exit";
     cout<<"\n\nI choose: ";
     cin>>choiceString;
@@ -52,6 +53,26 @@ int main ()
         case 2:
         {
             sub();
+            choice = choose();
+            switch (choice)
+            {
+                case 1:
+                {
+                    goto choosepoint;
+                    break;
+                }
+                default:
+                {
+                    cout<<"\n";
+                    bye();
+                    break;
+                }
+            }
+            break;
+        }
+        case 3:
+        {
+            mult();
             choice = choose();
             switch (choice)
             {
