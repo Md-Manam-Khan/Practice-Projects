@@ -11,7 +11,7 @@ void divi ()
     cin>>x>>y;
     if (y == 0)
     {
-        cout<<"\n0 cannot be divided\n";
+        cout<<"\n0 cannot be divided\n\n";
         goto choosePoint;
     }
     answer = x / y;
