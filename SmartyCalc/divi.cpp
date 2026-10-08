@@ -3,17 +3,16 @@
 using namespace std;
 using ll = long long;
 #include "divi.h"
-#include "choose.h"
 void divi ()
 {
     double x, y, answer;
+    choosePoint:
     cout<<"Input two numbers: ";
     cin>>x>>y;
     if (y == 0)
     {
-        cout<<"\n0 cannot be divided";
-        choose();
-        return;
+        cout<<"\n0 cannot be divided\n";
+        goto choosePoint;
     }
     answer = x / y;
     cout<<fixed<<setprecision(3);
