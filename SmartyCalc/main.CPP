@@ -6,7 +6,7 @@ using str = string;
 #include "add.h"
 #include "sub.h"
 #include "mult.h"
-#include "div.h"
+#include "divi.h"
 #include "choose.h"
 #include "bye.h"
 int main ()
@@ -95,7 +95,7 @@ int main ()
         }
         case 4:
         {
-            div();
+            divi();
             choice = choose();
             switch (choice)
             {
