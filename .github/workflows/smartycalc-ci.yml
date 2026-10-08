@@ -1,4 +1,4 @@
-name: SmartyCalc CI
+name: SmartyCalc CI  
 
 on:
   push:
