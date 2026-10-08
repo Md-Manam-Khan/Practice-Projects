@@ -6,6 +6,7 @@ using str = string;
 #include "add.h"
 #include "sub.h"
 #include "mult.h"
+#include "div.h"
 #include "choose.h"
 #include "bye.h"
 int main ()
@@ -74,6 +75,26 @@ int main ()
         case 3:
         {
             mult();
+            choice = choose();
+            switch (choice)
+            {
+                case 1:
+                {
+                    goto choosepoint;
+                    break;
+                }
+                default:
+                {
+                    cout<<"\n";
+                    bye();
+                    break;
+                }
+            }
+            break;
+        }
+        case 4:
+        {
+            div();
             choice = choose();
             switch (choice)
             {
