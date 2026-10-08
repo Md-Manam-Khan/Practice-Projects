@@ -2,6 +2,7 @@
 using namespace std;
 using ll = long long;
 using str = string;
+#include "choose.h"
 ll choose ()
 {
     ll choice;
