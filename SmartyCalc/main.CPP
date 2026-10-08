@@ -20,6 +20,7 @@ int main ()
     cout<<"\n1. Addition";
     cout<<"\n2. Subtraction";
     cout<<"\n3. Multiplication";
+    cout<<"\n4. Division";
     cout<<"\n0. Exit";
     cout<<"\n\nI choose: ";
     cin>>choiceString;
