@@ -12,7 +12,6 @@ void divi ()
     double num1, num2, answer;
     num1 = stoi(num1Str);
     num2 = stoi(num2Str);
-    answer = num1 + num2;
     choosePoint:
     if (num2 == 0)
     {
