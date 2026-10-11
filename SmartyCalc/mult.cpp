@@ -30,8 +30,9 @@ void mult ()
         cout<<"Proceed?\n";
         cout<<"1. Yes\n";
         cout<<"2. No, choose again\n\n";
-        cout<<"I choose: \n";
+        cout<<"I choose: ";
         cin>>choose;
+        cout<<"\n";
         switch (choose)
         {
             case 1:

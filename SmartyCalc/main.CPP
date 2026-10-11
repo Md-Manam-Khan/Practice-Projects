@@ -38,101 +38,26 @@ int main ()
         case 1:
         {
             add();
-            choice = choose();
-            switch (choice)
-            {
-                case 1:
-                {
-                    goto choosepoint;
-                    break;
-                }
-                default:
-                {
-                    cout<<"\n";
-                    bye();
-                    break;
-                }
-            }
             break;
         }
         case 2:
         {
             sub();
-            choice = choose();
-            switch (choice)
-            {
-                case 1:
-                {
-                    goto choosepoint;
-                    break;
-                }
-                default:
-                {
-                    cout<<"\n";
-                    bye();
-                    break;
-                }
-            }
             break;
         }
         case 3:
         {
             mult();
-            choice = choose();
-            switch (choice)
-            {
-                case 1:
-                {
-                    goto choosepoint;
-                    break;
-                }
-                default:
-                {
-                    cout<<"\n";
-                    bye();
-                    break;
-                }
-            }
             break;
         }
         case 4:
         {
             divi();
-            choice = choose();
-            switch (choice)
-            {
-                case 1:
-                {
-                    goto choosepoint;
-                    break;
-                }
-                default:
-                {
-                    cout<<"\n";
-                    bye();
-                    break;
-                }
-            }
             break;
         }
         case 5:
         {
             rem();
-            choice = choose();
-            switch (choice)
-            {
-                case 1:
-                {
-                    goto choosepoint;
-                    break;
-                }
-                default:
-                {
-                    cout<<"\n";
-                    bye();
-                    break;
-                }
-            }
             break;
         }
         default:
@@ -141,4 +66,19 @@ int main ()
             goto choosepoint;
         }
     }
+    choice = choose();
+    switch (choice)
+    {
+        case 1:
+        {
+            goto choosepoint;
+            break;
+        }
+        default:
+        {
+            cout<<"\n";
+            bye();
+            break;
+        }
+    }     
 }
