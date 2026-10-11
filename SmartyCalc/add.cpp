@@ -2,6 +2,7 @@
 using namespace std;
 using ll = long long;
 using str = string;
+#define line "====="
 #include "add.h"
 void add ()
 {
@@ -12,5 +13,5 @@ void add ()
     num1 = stoi(num1Str);
     num2 = stoi(num2Str);
     answer = num1 + num2;
-    cout<<"\nThe result of addition is: "<<answer;
+    cout<<"\n"<<line<<"The result of addition is: "<<answer<<line;
 }

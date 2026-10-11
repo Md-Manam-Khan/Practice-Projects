@@ -2,6 +2,7 @@
 using namespace std;
 using ll = long long;
 using str = string;
+#define line "====="
 #include "rem.h"
 void rem ()
 {
@@ -18,5 +19,5 @@ void rem ()
         goto choosePoint;
     }
     answer = num1 % num2;
-    cout<<"\nThe remainder after the operation is: "<<answer;
+    cout<<"\n"<<line<<"The remainder after the operation is: "<<answer<<line;
 }

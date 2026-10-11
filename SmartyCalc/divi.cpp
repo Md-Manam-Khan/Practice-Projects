@@ -3,6 +3,7 @@
 using namespace std;
 using ll = long long;
 using str = string;
+#define line "====="
 #include "divi.h"
 void divi ()
 {
@@ -15,10 +16,10 @@ void divi ()
     num2 = stoi(num2Str);
     if (num2 == 0)
     {
-        cout<<"\nDivision operation cannot be performed by 0\n\n";
+        cout<<"\n"<<line<<"Division operation cannot be performed by 0"<<line<<"\n\n";
         goto choosePoint;
     }
     answer = num1 / num2;
     cout<<fixed<<setprecision(3);
-    cout<<"\nThe result of division is: "<<answer;
+    cout<<"\n"<<line<<"The result of division is: "<<answer<<line;
 }

@@ -26,7 +26,7 @@ void mult ()
             case 1:
             {
                 answer = num1 * num2;
-                cout<<"\nThe result of multiplication is: "<<answer;
+                cout<<"\n"<<line<<"The result of multiplication is: "<<line<<answer;
                 break;
             }
             case 2:
