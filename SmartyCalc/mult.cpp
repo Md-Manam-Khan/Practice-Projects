@@ -7,7 +7,7 @@ using str = string;
 void mult ()
 {
     str num1Str, num2Str;
-    ll num1, num2, answer, choose;
+    ll num1, num2, answer, choose, result = 0;
     choosePoint:
     cout<<"Input two numbers: ";
     cin>>num1Str>>num2Str;
@@ -25,15 +25,25 @@ void mult ()
         {
             case 1:
             {
-                answer = num1 * num2;
-                cout<<"\n"<<line<<"The result of multiplication is: "<<line<<answer;
+                result = 1;
                 break;
             }
             case 2:
             {
+                result = 0;
                 goto choosePoint;
                 break;
             }
+            default:
+            {
+
+            }
+        }
+        if (result == 1)
+        {
+            result = 0;
+            answer = num1 * num2;
+            cout<<"\n"<<line<<"The result of multiplication is: "<<line<<answer;
         }
     }
 }
