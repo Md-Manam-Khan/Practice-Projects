@@ -7,6 +7,7 @@ using str = string;
 #include "sub.h"
 #include "mult.h"
 #include "divi.h"
+#include "rem.h"
 #include "choose.h"
 #include "bye.h"
 int main ()
@@ -21,6 +22,7 @@ int main ()
     cout<<"\n2. Subtraction";
     cout<<"\n3. Multiplication";
     cout<<"\n4. Division";
+    cout<<"\n5. Remainder";
     cout<<"\n0. Exit";
     cout<<"\n\nI choose: ";
     cin>>choiceString;
@@ -96,6 +98,26 @@ int main ()
         case 4:
         {
             divi();
+            choice = choose();
+            switch (choice)
+            {
+                case 1:
+                {
+                    goto choosepoint;
+                    break;
+                }
+                default:
+                {
+                    cout<<"\n";
+                    bye();
+                    break;
+                }
+            }
+            break;
+        }
+        case 5:
+        {
+            rem();
             choice = choose();
             switch (choice)
             {
