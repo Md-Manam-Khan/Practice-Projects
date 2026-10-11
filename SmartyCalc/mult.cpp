@@ -26,18 +26,17 @@ void mult ()
     if (zeroPresent)
     {
         choosePoint2:
-        cout<<"\n"<<line<<"Multiplying with 0 will cause the whole result to be zero"<<line<<"\n\n";
+        cout<<"\n"<<line<<" Multiplying with 0 will cause the whole result to be zero "<<line<<"\n\n";
         cout<<"Proceed?\n";
         cout<<"1. Yes\n";
         cout<<"2. No, choose again\n\n";
         cout<<"I choose: ";
         cin>>choose;
-        cout<<"\n";
         switch (choose)
         {
             case 1:
             {
-                cout<<"\n"<<line<<"The result of multiplication is: 0"<<line;
+                cout<<"\n"<<line<<" The result of multiplication is: 0 "<<line;
                 break;
             }
             case 2:
@@ -54,6 +53,6 @@ void mult ()
     }
     else
     {
-        cout<<"\n"<<line<<"The result of multiplication is: "<<answer<<line;
+        cout<<"\n"<<line<<" The result of multiplication is: "<<answer<<" "<<line;
     }
 }

@@ -15,7 +15,7 @@ int main ()
     ios::sync_with_stdio(false);
     str choiceString;
     ll choice, answer, x, y;
-    cout<<line<<"Welcome to SmartyCalc"<<line<<"\n";
+    cout<<line<<" Welcome to SmartyCalc "<<line<<"\n";
     choosepoint:
     cout<<"\nChoose a function:";
     cout<<"\n1. Addition";

@@ -19,5 +19,5 @@ void rem ()
         goto choosePoint;
     }
     answer = num1 % num2;
-    cout<<"\n"<<line<<"The remainder after the operation is: "<<answer<<line;
+    cout<<"\n"<<line<<" The remainder after the operation is: "<<answer<<" "<<line;
 }

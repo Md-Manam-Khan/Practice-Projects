@@ -13,5 +13,5 @@ void add ()
     num1 = stoi(num1Str);
     num2 = stoi(num2Str);
     answer = num1 + num2;
-    cout<<"\n"<<line<<"The result of addition is: "<<answer<<line;
+    cout<<"\n"<<line<<" The result of addition is: "<<answer<<" "<<line;
 }
