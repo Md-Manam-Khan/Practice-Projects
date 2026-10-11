@@ -7,43 +7,52 @@ using str = string;
 void mult ()
 {
     str num1Str, num2Str;
-    ll num1, num2, answer, choose, result = 0;
+    ll num1, num2, answer, choose;
+    bool zeroPresent = false;
     choosePoint:
     cout<<"Input two numbers: ";
     cin>>num1Str>>num2Str;
     num1 = stoi(num1Str);
     num2 = stoi(num2Str);
-    if ((num1 == 0) || (num2 == 0))
+    answer = num1 * num2;
+    if (answer == 0)
     {
+        zeroPresent = true;
+    }
+    else
+    {
+        zeroPresent = false;
+    }
+    if (zeroPresent)
+    {
+        choosePoint2:
         cout<<"\n"<<line<<"Multiplying with 0 will cause the whole result to be zero"<<line<<"\n\n";
         cout<<"Proceed?\n";
         cout<<"1. Yes\n";
-        cout<<"2. No, choose again!\n\n";
+        cout<<"2. No, choose again\n\n";
         cout<<"I choose: \n";
         cin>>choose;
         switch (choose)
         {
             case 1:
             {
-                result = 1;
+                cout<<"\n"<<line<<"The result of multiplication is: 0"<<line;
                 break;
             }
             case 2:
             {
-                result = 0;
                 goto choosePoint;
                 break;
             }
             default:
             {
-
+                cout<<"Wrong choice, choose again\n";
+                goto choosePoint2;
             }
         }
-        if (result == 1)
-        {
-            result = 0;
-            answer = num1 * num2;
-            cout<<"\n"<<line<<"The result of multiplication is: "<<line<<answer;
-        }
+    }
+    else
+    {
+        cout<<"\n"<<line<<"The result of multiplication is: "<<answer<<line;
     }
 }
