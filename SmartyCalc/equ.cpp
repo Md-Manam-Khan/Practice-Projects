@@ -10,6 +10,7 @@ void equ ()
     ll i;
     double num1, num2, result, total = 0;
     str equation;
+    bool found = true;
     getline(cin, equation);
     for (i = 0; i < equation.length(); i++)
     {
@@ -44,7 +45,12 @@ void equ ()
         else
         {
             cout<<"\n"<<line<<" Invalid sign detected! Choose again "<<line<<"\n\n";
+            found = false;
+            break;
         }
     }
-    cout<<"\n"<<line<<" The solution of the equation: "<<result<<" "<<line<<"\n\n";
+    if (found)
+    {
+        cout<<"\n"<<line<<" The solution of the equation: "<<result<<" "<<line<<"\n\n";
+    }
 }
