@@ -8,7 +8,6 @@ using str = string;
 #include "mult.h"
 #include "divi.h"
 #include "rem.h"
-#include "equ.h"
 #include "choose.h"
 #include "bye.h"
 int main ()
@@ -24,7 +23,6 @@ int main ()
     cout<<"\n3. Multiplication";
     cout<<"\n4. Division";
     cout<<"\n5. Remainder";
-    cout<<"\n6. Equation";
     cout<<"\n0. Exit";
     cout<<"\n\nI choose: ";
     cin>>choiceString;
@@ -60,11 +58,6 @@ int main ()
         case 5:
         {
             rem();
-            break;
-        }
-        case 6:
-        {
-            equ();
             break;
         }
         default:
