@@ -9,5 +9,17 @@ str successMessage (ll number)
     {
         return "Congratulations";
     }
+    else if (number % 3 == 0)
+    {
+        return "Yahoooo";
+    }
+    else if (number % 5 == 0)
+    {
+        return "Just mindblowing";
+    }
+    else if (number % 7 == 0)
+    {
+        return "Great";
+    }
     return "Awesome";
 }
