@@ -1,0 +1,61 @@
+name: Toss Simulator CI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "Toss_Simulator/**"
+      - ".github/workflows/tosssimulator-ci.yml"
+
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "Toss_Simulator/**"
+      - ".github/workflows/tosssimulator-ci.yml"
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    defaults:
+      run:
+        working-directory: Toss_Simulator
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Build Toss Simulator
+        shell: bash
+        run: |
+          mkdir -p build
+
+          # Compile every .cpp/.CPP file in Toss_Simulator (pure bash glob, no find/sort,
+          # because Windows runners can resolve `find` to the Windows find.exe)
+          shopt -s nocaseglob nullglob
+          SOURCES=(*.cpp)
+
+          if [ ${#SOURCES[@]} -eq 0 ]; then
+            echo "No .cpp files found in $(pwd)"
+            exit 1
+          fi
+
+          echo "Compiling ${#SOURCES[@]} files: ${SOURCES[*]}"
+          g++ --version
+
+          g++ -std=c++17 -Wall -Wextra -pedantic \
+            "${SOURCES[@]}" \
+            -o build/Toss_Simulator.exe
+
+      - name: Verify build
+        shell: bash
+        run: |
+          test -f build/Toss_Simulator.exe
+
+      - name: Upload compiled program
+        uses: actions/upload-artifact@v4
+        with:
+          name: Toss_Simulator-Windows
+          path: Toss_Simulator/build/Toss_Simulator.exe
