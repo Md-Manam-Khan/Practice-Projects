@@ -1,0 +1,61 @@
+name: Number Guessing Game CI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "Number_Guessing_Game/**"
+      - ".github/workflows/numberguess-ci.yml"
+
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "Number_Guessing_Game/**"
+      - ".github/workflows/numberguess-ci.yml"
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    defaults:
+      run:
+        working-directory: Number_Guessing_Game
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Build Number Guessing Game
+        shell: bash
+        run: |
+          mkdir -p build
+
+          # Compile every .cpp/.CPP file in Number_Guessing_Game (pure bash glob, no find/sort,
+          # because Windows runners can resolve `find` to the Windows find.exe)
+          shopt -s nocaseglob nullglob
+          SOURCES=(*.cpp)
+
+          if [ ${#SOURCES[@]} -eq 0 ]; then
+            echo "No .cpp files found in $(pwd)"
+            exit 1
+          fi
+
+          echo "Compiling ${#SOURCES[@]} files: ${SOURCES[*]}"
+          g++ --version
+
+          g++ -std=c++17 -Wall -Wextra -pedantic \
+            "${SOURCES[@]}" \
+            -o build/Number_Guessing_Game.exe
+
+      - name: Verify build
+        shell: bash
+        run: |
+          test -f build/Number_Guessing_Game.exe
+
+      - name: Upload compiled program
+        uses: actions/upload-artifact@v4
+        with:
+          name: Number_Guessing_Game-Windows
+          path: Number_Guessing_Game/build/Number_Guessing_Game.exe
