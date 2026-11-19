@@ -30,8 +30,8 @@ Nothing here is copied. If something looks rough around the edges, that's intent
 
 | Project | Language | Description |
 |---|---|---|
-| [Toss_Simulator](./Toss_Simulator) | C++ | Coin toss simulator with multiple game modes and result logging |
-| [Number_Guessing_Game](./Number_Guessing_Game) | C++ | Classic number guessing game |
+| [Toss_Simulator](./Toss_Simulator) | C++ | Coin toss simulator with multiple game modes and result logging; multi-file, same layout as SmartyCalc |
+| [Number_Guessing_Game](./Number_Guessing_Game) | C++ | Classic number guessing game; multi-file, same layout as SmartyCalc |
 | [SmartyCalc](./SmartyCalc) | C++ | Console calculator; my first multi-file C++ project. Trig, geometry, and time conversion planned |
 
 Each project folder contains its own `README.md` with specifics.
